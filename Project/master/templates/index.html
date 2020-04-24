@@ -1,0 +1,68 @@
+<!DOCTYPE html> 
+  	<head> 
+    <title>Slave Control</title> 
+	<link rel="stylesheet" href='../static/style.css'/> 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  	</head> 
+  	<body>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+		<nav class="navbar navbar-expand-sm bg-dark">
+			<p class="slave-head">Slave Control<p>
+		</nav>			
+		<!-- <h1>Slave Control</h1>  -->
+		<div class="slave-body">	
+			<!-- <h2> Slave Status </h2>  -->
+			<!-- <h3> BUTTON ==>  {{ button  }}</h3> 
+			<h3> MOTION ==>  {{ senPIR  }}</h3>  -->
+			<!-- <br>  -->
+			<div class="row">
+				<div class="col">
+					<div class="leftside">
+						<p> Slave Status </p>
+						<div class="slave-information"> 
+							<p>SLAVE 1</br> current mode: AUTO percentRH: 63</p></br>	
+							<a href="/0/0" class="btn btn-primary">AUTO</a>
+							<a href="/0/1" class="btn btn-success">ON</a>
+							<a href="/0/2" class="btn btn-danger">OFF</a>
+							<a href="/plot/2001" class="btn btn-info">GRAPH</a>
+									
+						</div>
+						<div class="slave-information"> 
+							<p>SLAVE 2</br> current mode: AUTO percentRH: 57</p></br>	
+							<a href="/1/0" class="btn btn-primary">AUTO</a>
+							<a href="/1/1" class="btn btn-success">ON</a>
+							<a href="/1/2" class="btn btn-danger">OFF</a>
+							<a href="/plot/2002" class="btn btn-info">GRAPH</a>
+								
+						</div>
+						<div class="slave-information"> 
+							<p>SLAVE 3</br> current mode: ON percentRH: 55</p></br>
+								
+							<a href="/2/0" class="btn btn-primary">AUTO</a>
+							<a href="/2/1" class="btn btn-success">ON</a>
+							<a href="/2/2" class="btn btn-danger">OFF</a>
+							<a href="/plot/2003" class="btn btn-info">GRAPH</a>
+						</div>
+					</div>	
+				</div>
+				<div class="col">
+					<div class="rightside">
+						<img src="./Images/example_real_sensor.PNG" alt="Image Placeholder">
+						<!-- graph -->
+					</div>
+				</div>
+			</div>
+		</div> 
+		</body> 
+
+
+		<script>
+			function myFunction() {
+				location.replace("http://192.168.0.113:8080/") // input rasp pi ip address(http://raspi_ip:8080)
+			}
+
+			setTimeout(function(){ myFunction(); }, 0);
+		</script>
+</html>
